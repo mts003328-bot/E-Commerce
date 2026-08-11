@@ -1,16 +1,207 @@
-# React + Vite
+# 🛒 E-Commerce Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **React-based e-commerce application** built to demonstrate frontend development, REST API integration, authentication, state management, routing, and CRUD functionality.
 
-Currently, two official plugins are available:
+The project focuses on building a realistic shopping experience while applying modern React development practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 🔐 User Login & Authentication
+* 👤 Current User & Token Management
+* 🔄 Access Token Refresh
+* 🛍️ Dynamic Product Listing
+* 🔎 Product Search & Filtering
+* 📦 Dynamic Product Details
+* 💬 Product Comments
+* ➕ Add Products
+* ✏️ Update Products
+* 🗑️ Delete Products
+* 🔗 Dynamic Routing
+* 📱 Responsive UI
+* ⚡ Loading & Error Handling
+* 💾 Persistent Authentication using `localStorage`
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧰 Tech Stack
+
+### Frontend
+
+* **React.js**
+* **JavaScript (ES6+)**
+* **JSX**
+* **HTML5**
+* **CSS3**
+* **Bootstrap**
+
+### React Ecosystem
+
+* **React Router DOM** — client-side routing
+* **React Hooks** — `useState`, `useEffect`, `useContext`, etc.
+* **Context API** — shared authentication state
+* **Redux Toolkit** — centralized state management
+
+### API & Data
+
+* **REST APIs**
+* **DummyJSON API**
+* JavaScript `fetch()` for API requests
+* CRUD operations using HTTP methods:
+
+  * `GET`
+  * `POST`
+  * `PUT/PATCH`
+  * `DELETE`
+
+### Storage & Authentication
+
+* Access Tokens
+* Refresh Tokens
+* Bearer Authentication
+* Browser `localStorage`
+
+---
+
+## 🔑 Authentication
+
+The application integrates authentication through the DummyJSON REST API.
+
+The authentication system supports:
+
+1. User login
+2. Access token handling
+3. Refresh token handling
+4. Fetching the authenticated user
+5. Persistent login state
+6. Logout and token removal
+
+## Authentication state is managed through both **Context API** and **Redux Toolkit**, with tokens persisted in `localStorage`.
+
+## 🔌 API Integration
+
+The application communicates with REST endpoints to handle authentication, products, and comments.
+
+Example operations include:
+
+```text
+GET     /products
+GET     /products/:id
+POST    /products/add
+PUT     /products/:id
+DELETE  /products/:id
+
+GET     /comments
+GET     /comments/post/:id
+POST    /comments/add
+PUT     /comments/:id
+DELETE  /comments/:id
+```
+
+The application uses asynchronous `fetch()` requests to retrieve and manipulate API data.
+
+---
+
+## 🧠 State Management
+
+The project demonstrates multiple approaches to state management:
+
+* **useState** for component-level state
+* **Context API** for shared authentication state
+* **Redux Toolkit** for centralized authentication state
+* **localStorage** for persistent token storage
+
+This combination demonstrates practical understanding of both local and global state management in React.
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+│
+├── api/
+│   ├── products.js
+│   ├── comments.js
+│   └── auth.js
+│
+├── components/
+│   ├── ProductCard.jsx
+│   └── ...
+│
+├── pages/
+│   ├── Login.jsx
+│   ├── Products.jsx
+│   ├── ProductDetails.jsx
+│   ├── AddProduct.jsx
+│   └── ...
+│
+├── context/
+│   └── AuthContext.jsx
+│
+├── redux/
+│   └── authSlice.js
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate to the project:
+
+```bash
+cd <project-folder>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application will be available on the local Vite development server.
+
+---
+
+## 🎯 Project Purpose
+
+This project was developed as a practical React application to strengthen understanding of:
+
+* Component-based architecture
+* JSX and React Hooks
+* Props and state
+* Client-side routing
+* REST API integration
+* Authentication
+* CRUD operations
+* Context API
+* Redux Toolkit
+* Asynchronous JavaScript
+* Persistent browser storage
+* Responsive UI development
+
+---
+
+## 👨‍💻 Author
+
+Muhammad Tuaha Shahzad
+
+Built with React, REST APIs, and a focus on practical frontend development.
+
+```
