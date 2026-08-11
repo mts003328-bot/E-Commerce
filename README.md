@@ -205,6 +205,3 @@ Muhammad Tuaha Shahzad
 Built with React, REST APIs, and a focus on practical frontend development.
 
 ```
-
-**One important point:** don't put every tiny implementation detail into the README. A professional README sells the project and explains its architecture; the actual code should demonstrate the depth. This version hits that balance.
-```
